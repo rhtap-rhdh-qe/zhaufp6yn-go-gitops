@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: zhaufp6yn-go-gitops
+  description: This is GitOps manifest for zhaufp6yn-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: zhaufp6yn-go
+    backstage.io/kubernetes-id: zhaufp6yn-go 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: zhaufp6yn-go   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:zhaufp6yn-go
